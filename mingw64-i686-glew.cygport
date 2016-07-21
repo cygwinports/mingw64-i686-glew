@@ -2,7 +2,7 @@ CROSS_HOST="i686-w64-mingw32"
 inherit cross
 
 NAME="mingw64-i686-glew"
-VERSION=1.11.0
+VERSION=1.13.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="OpenGL Extension Wrangler library for Win32 toolchain"
