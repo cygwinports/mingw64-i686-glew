@@ -17,7 +17,9 @@ SRC_DIR="glew-${VERSION}"
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake all SYSTEM=mingw LDFLAGS.EXTRA= LIBGLU= \
+	cygmake glew.lib SYSTEM=mingw LIBGLU= \
+		CC=${CC} LD=${CC} AR=${AR} STRIP=: GLEW_PREFIX=${CROSS_PREFIX}
+	cygmake glew.bin SYSTEM=mingw LDFLAGS.EXTRA= LIBGLU= \
 		CC=${CC} LD=${CC} AR=${AR} STRIP=: GLEW_PREFIX=${CROSS_PREFIX}
 }
 
